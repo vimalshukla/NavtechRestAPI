@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SimpleStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SimpleStoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CustomerDetails" EntityType="SimpleStoreModel.CustomerDetail" />
+    <EntitySet Name="OrderDetails" EntityType="SimpleStoreModel.OrderDetail" />
+    <EntitySet Name="OrderProductMappings" EntityType="SimpleStoreModel.OrderProductMapping" />
+    <EntitySet Name="OrderStatus" EntityType="SimpleStoreModel.OrderStatu" />
+    <EntitySet Name="PaymentModes" EntityType="SimpleStoreModel.PaymentMode" />
+    <EntitySet Name="Products" EntityType="SimpleStoreModel.Product" />
+    <AssociationSet Name="FK_OrderDeatils_CustomerDetails" Association="SimpleStoreModel.FK_OrderDeatils_CustomerDetails">
+      <End Role="CustomerDetail" EntitySet="CustomerDetails" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_PaymentMode" Association="SimpleStoreModel.FK_Order_PaymentMode">
+      <End Role="PaymentMode" EntitySet="PaymentModes" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDeatils_OrderStatus" Association="SimpleStoreModel.FK_OrderDeatils_OrderStatus">
+      <End Role="OrderStatu" EntitySet="OrderStatus" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderProductMapping_Order" Association="SimpleStoreModel.FK_OrderProductMapping_Order">
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+      <End Role="OrderProductMapping" EntitySet="OrderProductMappings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderProductMapping_Product" Association="SimpleStoreModel.FK_OrderProductMapping_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="OrderProductMapping" EntitySet="OrderProductMappings" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CustomerDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="FullName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="OrderDetails" Relationship="SimpleStoreModel.FK_OrderDeatils_CustomerDetails" FromRole="CustomerDetail" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TotalAmount" Type="Double" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="PaymentModeId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CustomerDetail" Relationship="SimpleStoreModel.FK_OrderDeatils_CustomerDetails" FromRole="OrderDetail" ToRole="CustomerDetail" />
+    <NavigationProperty Name="PaymentMode" Relationship="SimpleStoreModel.FK_Order_PaymentMode" FromRole="OrderDetail" ToRole="PaymentMode" />
+    <NavigationProperty Name="OrderStatu" Relationship="SimpleStoreModel.FK_OrderDeatils_OrderStatus" FromRole="OrderDetail" ToRole="OrderStatu" />
+    <NavigationProperty Name="OrderProductMappings" Relationship="SimpleStoreModel.FK_OrderProductMapping_Order" FromRole="OrderDetail" ToRole="OrderProductMapping" />
+  </EntityType>
+  <EntityType Name="OrderProductMapping">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrderDetail" Relationship="SimpleStoreModel.FK_OrderProductMapping_Order" FromRole="OrderProductMapping" ToRole="OrderDetail" />
+    <NavigationProperty Name="Product" Relationship="SimpleStoreModel.FK_OrderProductMapping_Product" FromRole="OrderProductMapping" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="OrderStatu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="OrderDetails" Relationship="SimpleStoreModel.FK_OrderDeatils_OrderStatus" FromRole="OrderStatu" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="PaymentMode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrderDetails" Relationship="SimpleStoreModel.FK_Order_PaymentMode" FromRole="PaymentMode" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Details" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="StockQuantity" Type="Int32" Nullable="false" />
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="OrderProductMappings" Relationship="SimpleStoreModel.FK_OrderProductMapping_Product" FromRole="Product" ToRole="OrderProductMapping" />
+  </EntityType>
+  <Association Name="FK_OrderDeatils_CustomerDetails">
+    <End Type="SimpleStoreModel.CustomerDetail" Role="CustomerDetail" Multiplicity="1" />
+    <End Type="SimpleStoreModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CustomerDetail">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_PaymentMode">
+    <End Type="SimpleStoreModel.PaymentMode" Role="PaymentMode" Multiplicity="1" />
+    <End Type="SimpleStoreModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMode">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="PaymentModeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDeatils_OrderStatus">
+    <End Type="SimpleStoreModel.OrderStatu" Role="OrderStatu" Multiplicity="1" />
+    <End Type="SimpleStoreModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderStatu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderProductMapping_Order">
+    <End Type="SimpleStoreModel.OrderDetail" Role="OrderDetail" Multiplicity="1" />
+    <End Type="SimpleStoreModel.OrderProductMapping" Role="OrderProductMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderDetail">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderProductMapping">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderProductMapping_Product">
+    <End Type="SimpleStoreModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="SimpleStoreModel.OrderProductMapping" Role="OrderProductMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderProductMapping">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

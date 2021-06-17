@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "JkF1w9sykPuM+rfJN/SO9NjR15lPjSNX09Pc9esM6BugF1p8i+qLsBDJqZ+Q1DYr7rZp59SiqHs9PIETZBeODg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\IMDVK\\source\\repos\\RESTAPI\\Models\\Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\IMDVK\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\IMDVK\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

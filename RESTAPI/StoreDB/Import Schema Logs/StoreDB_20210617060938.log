@@ -1,0 +1,86 @@
+17-06-2021 11:39:38 PM	This log contains information about the import schema operation into project 'StoreDB' on computer 'MSI' by user 'IMDVK'.
+17-06-2021 11:39:38 PM	Import of database schema has started.
+17-06-2021 11:39:48 PM	Gathering database credentials
+17-06-2021 11:39:48 PM	Gathering database options
+17-06-2021 11:39:48 PM	Gathering generic database scoped configuration option
+17-06-2021 11:39:48 PM	Gathering users
+17-06-2021 11:39:48 PM	Gathering roles
+17-06-2021 11:39:48 PM	Gathering application roles
+17-06-2021 11:39:48 PM	Gathering role memberships
+17-06-2021 11:39:48 PM	Gathering filegroups
+17-06-2021 11:39:48 PM	Gathering full-text catalogs
+17-06-2021 11:39:48 PM	Gathering assemblies
+17-06-2021 11:39:48 PM	Gathering certificates
+17-06-2021 11:39:48 PM	Gathering asymmetric keys
+17-06-2021 11:39:48 PM	Gathering symmetric keys
+17-06-2021 11:39:48 PM	Gathering encrypted symmetric keys
+17-06-2021 11:39:48 PM	Gathering schemas
+17-06-2021 11:39:48 PM	Gathering XML schema collections
+17-06-2021 11:39:48 PM	Gathering user-defined data types
+17-06-2021 11:39:48 PM	Gathering user-defined types
+17-06-2021 11:39:48 PM	Gathering table types
+17-06-2021 11:39:48 PM	Gathering unique keys for table types
+17-06-2021 11:39:48 PM	Gathering primary keys for table types
+17-06-2021 11:40:25 PM	Gathering indexes for table types
+17-06-2021 11:40:25 PM	Gathering check constraints for table types
+17-06-2021 11:40:25 PM	Gathering default constraints for table types
+17-06-2021 11:40:25 PM	Gathering partition functions
+17-06-2021 11:40:25 PM	Gathering partition schemes
+17-06-2021 11:40:25 PM	Gathering functions
+17-06-2021 11:40:25 PM	Gathering encrypted functions
+17-06-2021 11:40:26 PM	Gathering aggregates
+17-06-2021 11:40:26 PM	Gathering procedures
+17-06-2021 11:40:26 PM	Gathering encrypted procedures
+17-06-2021 11:40:26 PM	Gathering tables
+17-06-2021 11:40:26 PM	Gathering primary keys
+17-06-2021 11:40:26 PM	Gathering unique constraints
+17-06-2021 11:40:26 PM	Gathering foreign keys
+17-06-2021 11:40:26 PM	Gathering default constraints
+17-06-2021 11:40:26 PM	Gathering check constraints
+17-06-2021 11:40:26 PM	Gathering views
+17-06-2021 11:40:26 PM	Gathering encrypted views
+17-06-2021 11:40:26 PM	Gathering indexes
+17-06-2021 11:40:26 PM	Gathering statistics
+17-06-2021 11:40:26 PM	Gathering full-text index stoplists
+17-06-2021 11:40:26 PM	Gathering search property lists
+17-06-2021 11:40:26 PM	Gathering search properties
+17-06-2021 11:40:26 PM	Gathering full-text indexes
+17-06-2021 11:40:26 PM	Gathering column store indexes
+17-06-2021 11:40:26 PM	Gathering spatial indexes
+17-06-2021 11:40:26 PM	Gathering XML indexes
+17-06-2021 11:40:26 PM	Gathering Selective XML indexes
+17-06-2021 11:40:26 PM	Gathering encrypted triggers
+17-06-2021 11:40:26 PM	Gathering triggers
+17-06-2021 11:40:26 PM	Gathering encrypted and clr ddl triggers
+17-06-2021 11:40:26 PM	Gathering ddl triggers
+17-06-2021 11:40:26 PM	Creating edge constraints
+17-06-2021 11:40:26 PM	Gathering synonyms
+17-06-2021 11:40:26 PM	Gathering defaults
+17-06-2021 11:40:26 PM	Gathering data constraint uddt bindings
+17-06-2021 11:40:26 PM	Gathering rules
+17-06-2021 11:40:26 PM	Gathering data constraint uddt bindings
+17-06-2021 11:40:26 PM	Gathering message types
+17-06-2021 11:40:26 PM	Gathering queues
+17-06-2021 11:40:26 PM	Gathering contracts
+17-06-2021 11:40:26 PM	Gathering services
+17-06-2021 11:40:26 PM	Gathering event notifications
+17-06-2021 11:40:26 PM	Gathering remote service bindings
+17-06-2021 11:40:26 PM	Gathering broker priorities
+17-06-2021 11:40:26 PM	Gathering signatures
+17-06-2021 11:40:26 PM	Gathering data compression options
+17-06-2021 11:40:26 PM	Gathering sequence types
+17-06-2021 11:40:26 PM	Gathering security policies
+17-06-2021 11:40:26 PM	Gather column encryption keys
+17-06-2021 11:40:26 PM	Gathering column master keys
+17-06-2021 11:40:26 PM	Gathering external data sources
+17-06-2021 11:40:26 PM	Gathering external file formats
+17-06-2021 11:40:26 PM	Gathering external tables
+17-06-2021 11:40:26 PM	Gathering extended properties
+17-06-2021 11:40:26 PM	Gathering credentials
+17-06-2021 11:40:26 PM	Gathering logins
+17-06-2021 11:40:26 PM	Gathering server audits
+17-06-2021 11:40:26 PM	Scanning project for duplicate elements
+17-06-2021 11:40:26 PM	Finished duplicate element processing
+17-06-2021 11:40:27 PM	Finished importing database.
+17-06-2021 11:40:27 PM	A summary of the import was saved to the following location: C:\Users\IMDVK\source\repos\RESTAPI\StoreDB\Import Schema Logs\StoreDB_20210617060938.log
+17-06-2021 11:40:27 PM	Click Finish to continue...

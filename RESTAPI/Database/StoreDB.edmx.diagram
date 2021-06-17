@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2434fea25d3845a685c93293f4f0e1e6" Name="Diagram1">
+        <EntityTypeShape EntityType="SimpleStoreModel.CustomerDetail" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="SimpleStoreModel.OrderDetail" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="SimpleStoreModel.OrderProductMapping" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="SimpleStoreModel.OrderStatu" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="SimpleStoreModel.PaymentMode" Width="1.5" PointX="0.75" PointY="7.25" />
+        <EntityTypeShape EntityType="SimpleStoreModel.Product" Width="1.5" PointX="3" PointY="5.125" />
+        <AssociationConnector Association="SimpleStoreModel.FK_OrderDeatils_CustomerDetails" />
+        <AssociationConnector Association="SimpleStoreModel.FK_Order_PaymentMode" />
+        <AssociationConnector Association="SimpleStoreModel.FK_OrderDeatils_OrderStatus" />
+        <AssociationConnector Association="SimpleStoreModel.FK_OrderProductMapping_Order" />
+        <AssociationConnector Association="SimpleStoreModel.FK_OrderProductMapping_Product" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

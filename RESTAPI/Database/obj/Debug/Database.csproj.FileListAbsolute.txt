@@ -1,0 +1,12 @@
+C:\Users\IMDVK\source\repos\RESTAPI\Database\bin\Debug\Database.dll.config
+C:\Users\IMDVK\source\repos\RESTAPI\Database\bin\Debug\Database.dll
+C:\Users\IMDVK\source\repos\RESTAPI\Database\bin\Debug\Database.pdb
+C:\Users\IMDVK\source\repos\RESTAPI\Database\bin\Debug\EntityFramework.dll
+C:\Users\IMDVK\source\repos\RESTAPI\Database\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\IMDVK\source\repos\RESTAPI\Database\bin\Debug\EntityFramework.xml
+C:\Users\IMDVK\source\repos\RESTAPI\Database\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\IMDVK\source\repos\RESTAPI\Database\obj\Debug\Database.csprojAssemblyReference.cache
+C:\Users\IMDVK\source\repos\RESTAPI\Database\obj\Debug\Database.csproj.CoreCompileInputs.cache
+C:\Users\IMDVK\source\repos\RESTAPI\Database\obj\Debug\Database.csproj.CopyComplete
+C:\Users\IMDVK\source\repos\RESTAPI\Database\obj\Debug\Database.dll
+C:\Users\IMDVK\source\repos\RESTAPI\Database\obj\Debug\Database.pdb
